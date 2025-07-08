@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!4 &1790049682851897455
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.02, y: 1.57, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1790049682851897454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790049682851897455}
+  - component: {fileID: 1790049682851897456}
+  m_Layer: 0
+  m_Name: "EnemyTank"
+  m_TagString:
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1790049682851897456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439914d1403ff679413d66409c7d45fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyTurretsSprites:
+  - {fileID: 21300000, guid: 10fb3a7d12b74a4ca55ecc90f777596d, type: 3}
+  - {fileID: 21300000, guid: 9ffad6233a6547a68ebe3f2483d8f18b, type: 3}
+  - {fileID: 21300000, guid: 02085cf6115b49d287f82d2f3dc50e55, type: 3}
+  - {fileID: 21300000, guid: 3b4f0c38737540adbde945277177dd0e, type: 3}
+  - {fileID: 21300000, guid: 447fe38febf5416282e6cec097efabf1, type: 3}
+  - {fileID: 21300000, guid: c6712a7d844040af958aac9b9e783fa4, type: 3}
+  - {fileID: 21300000, guid: c6712a7d844040af958aac9b9e783fa4, type: 3}
+  - {fileID: 21300000, guid: c6712a7d844040af958aac9b9e783fa4, type: 3}
+  - {fileID: 21300000, guid: 52ed07144fc14564bd4e1bbd2bc8a99e, type: 3}
+  - {fileID: 21300000, guid: e4789d9ddf9848cf881e82bfeacfa430, type: 3}
+  - {fileID: 21300000, guid: 79afd8396f3b4a5887f030d01f3cf937, type: 3}
+  - {fileID: 21300000, guid: 79afd8396f3b4a5887f030d01f3cf937, type: 3}
+  - {fileID: 21300000, guid: b34692acddd4466793e0af9bec82e9d1, type: 3}
+  - {fileID: 21300000, guid: 69aafc33a5084bc5b2f9289c04c66d13, type: 3}
+  - {fileID: 21300000, guid: 0db28634203641459f16b5cb339476d6, type: 3}
+  EnemyTurretsFlashSprites:
+  - {fileID: 21300000, guid: 1c321fe5e5144de686e33fda45857c74, type: 3}
+  - {fileID: 21300000, guid: 1bd7c0917e9b40259bee32c188161b2b, type: 3}
+  - {fileID: 21300000, guid: 347f137389904edea65d224f95ad4c0e, type: 3}
+  - {fileID: 21300000, guid: f3bebfdb819548e194570b712eec30a9, type: 3}
+  - {fileID: 21300000, guid: c2fff8b68db342c5a7d99adb758d85ef, type: 3}
+  - {fileID: 21300000, guid: 43516126f8f9405ca2e6863b18d17740, type: 3}
+  - {fileID: 21300000, guid: 43516126f8f9405ca2e6863b18d17740, type: 3}
+  - {fileID: 21300000, guid: 43516126f8f9405ca2e6863b18d17740, type: 3}
+  - {fileID: 21300000, guid: c5e3cbfb039b4aae817d745c09cf4327, type: 3}
+  - {fileID: 21300000, guid: 20f68ec7020c4ce5a8d8a24ddf07d592, type: 3}
+  - {fileID: 21300000, guid: 7477a7317b4349f4b4355a4d044acdb1, type: 3}
+  - {fileID: 21300000, guid: 7477a7317b4349f4b4355a4d044acdb1, type: 3}
+  - {fileID: 21300000, guid: b1237a40cc494aebb9c80967d7111bca, type: 3}
+  - {fileID: 21300000, guid: 9fa8d1591ef742fbbd544ee5a818ed58, type: 3}
+  - {fileID: 21300000, guid: ad173d9db8b44267b7c236addd1a5edc, type: 3}
+  EnemyBasesSprites1:
+  - {fileID: 21300000, guid: 09c3527d27064b43b6a10ec62bf997b3, type: 3}
+  - {fileID: 21300000, guid: d9aaccdb2ca945ed850b4f09cd2bbdf0, type: 3}
+  - {fileID: 21300000, guid: 4353b349f50c4031a6de56afdec51408, type: 3}
+  - {fileID: 21300000, guid: bc5b8a53efcc49c9ae7935d73549d41f, type: 3}
+  - {fileID: 21300000, guid: d79fd8084a2e448a9af60739133c9575, type: 3}
+  - {fileID: 21300000, guid: caeb1231c0614c6ebbaba3c38d8ab605, type: 3}
+  - {fileID: 21300000, guid: caeb1231c0614c6ebbaba3c38d8ab605, type: 3}
+  - {fileID: 21300000, guid: caeb1231c0614c6ebbaba3c38d8ab605, type: 3}
+  - {fileID: 21300000, guid: 19b3985152ae4c12a591e7b25f63568c, type: 3}
+  - {fileID: 21300000, guid: 8fe11889d91f47599b2ef4f867cf8219, type: 3}
+  - {fileID: 21300000, guid: 21f434cf4b864639b8cb2d48170c81a7, type: 3}
+  - {fileID: 21300000, guid: 21f434cf4b864639b8cb2d48170c81a7, type: 3}
+  - {fileID: 21300000, guid: eb6e5085d45b43b591ad297362c11f14, type: 3}
+  - {fileID: 21300000, guid: 30bfdfc6d4254774ae73796a5cf6c348, type: 3}
+  - {fileID: 21300000, guid: 06fee40361ff4e7badf3b796926de4b8, type: 3}
+  EnemyBasesSprites2:
+  - {fileID: 21300000, guid: 8f6d89f485b04174826e31a45daec5e3, type: 3}
+  - {fileID: 21300000, guid: 7b305d91c6d64076908a4151915b042b, type: 3}
+  - {fileID: 21300000, guid: 3662e749e3de482eb90c4f8f4e8387c4, type: 3}
+  - {fileID: 21300000, guid: 6871657b449b4a65abc28a19b8b52bad, type: 3}
+  - {fileID: 21300000, guid: f1d2a9835090409d88fedbd0e5448d5d, type: 3}
+  - {fileID: 21300000, guid: 70da6053a0724f10b7313eb8b44d2cda, type: 3}
+  - {fileID: 21300000, guid: 70da6053a0724f10b7313eb8b44d2cda, type: 3}
+  - {fileID: 21300000, guid: 70da6053a0724f10b7313eb8b44d2cda, type: 3}
+  - {fileID: 21300000, guid: e25dc6db2dbe4872b2ded375f3c1104b, type: 3}
+  - {fileID: 21300000, guid: ce989be4c3fe4e46ac958a2c3b1e9073, type: 3}
+  - {fileID: 21300000, guid: 7d7de915dbeb4ec1942d1398fb5927bb, type: 3}
+  - {fileID: 21300000, guid: 7d7de915dbeb4ec1942d1398fb5927bb, type: 3}
+  - {fileID: 21300000, guid: 1c5d0705aea0418b84fa0284febe5357, type: 3}
+  - {fileID: 21300000, guid: 2902088fe9984ee495ac2d1d5b729646, type: 3}
+  - {fileID: 21300000, guid: 296ee0ed79d84b9d8658bbc2b26958e1, type: 3}
+  EnemyBossTurretsSprites:
+  - {fileID: 21300000, guid: a14feff1d64044668802750029c6e3b9, type: 3}
+  - {fileID: 21300000, guid: bf199037d80646d791308399680c24ba, type: 3}
+  - {fileID: 21300000, guid: b41caca3d55f460e9d757e846b9ba57f, type: 3}
+  - {fileID: 21300000, guid: 082fd0e0118d4508a5dc94657d5e69d6, type: 3}
+  - {fileID: 21300000, guid: 4fa671fbba074aa3a9769210b7a8543f, type: 3}
+  - {fileID: 21300000, guid: a14feff1d64044668802750029c6e3b9, type: 3}
+  - {fileID: 21300000, guid: a14feff1d64044668802750029c6e3b9, type: 3}
+  - {fileID: 21300000, guid: bfdb7efdfbe94256a295536a1e60e153, type: 3}
+  - {fileID: 21300000, guid: 074c22d03cf04ae0abeb4aca177cf79e, type: 3}
+  - {fileID: 21300000, guid: a14feff1d64044668802750029c6e3b9, type: 3}
+  - {fileID: 21300000, guid: a14feff1d64044668802750029c6e3b9, type: 3}
+  - {fileID: 21300000, guid: a14feff1d64044668802750029c6e3b9, type: 3}
+  - {fileID: 21300000, guid: bf848b7021d64abc987f86b470719198, type: 3}
+  - {fileID: 21300000, guid: 43aefa9a52234b609c69d2345731363e, type: 3}
+  - {fileID: 21300000, guid: d41338c3366c4d5d977f66cf30ebbafe, type: 3}
+  EnemyBossTurretsFlashSprites:
+  - {fileID: 21300000, guid: 19a6018196634e41bc60e4338b50ca20, type: 3}
+  - {fileID: 21300000, guid: dc93aeae047447bfb2095d8b3810561e, type: 3}
+  - {fileID: 21300000, guid: 4434a2d7af8842e7b82de56e7f361604, type: 3}
+  - {fileID: 21300000, guid: d9281c60b6654df0bba5888063a91d67, type: 3}
+  - {fileID: 21300000, guid: 9ca255ce0ca040968c22dba6bfe71e5e, type: 3}
+  - {fileID: 21300000, guid: 19a6018196634e41bc60e4338b50ca20, type: 3}
+  - {fileID: 21300000, guid: 19a6018196634e41bc60e4338b50ca20, type: 3}
+  - {fileID: 21300000, guid: 02aa275d82f44695aeff1ffee298c348, type: 3}
+  - {fileID: 21300000, guid: 56e80e2864404ed1a8700f67a072a65a, type: 3}
+  - {fileID: 21300000, guid: 19a6018196634e41bc60e4338b50ca20, type: 3}
+  - {fileID: 21300000, guid: 19a6018196634e41bc60e4338b50ca20, type: 3}
+  - {fileID: 21300000, guid: 19a6018196634e41bc60e4338b50ca20, type: 3}
+  - {fileID: 21300000, guid: 317ea47a29484817a92a81b2b81a0899, type: 3}
+  - {fileID: 21300000, guid: ea6ac4798b344d11824988e8f41d561b, type: 3}
+  - {fileID: 21300000, guid: 13b6eb8d9a254e52bb95d4e9e73427fa, type: 3}
+  EnemyBossBasesSprites1:
+  - {fileID: 21300000, guid: 3e7b79352faf4701a60206977f8e6bab, type: 3}
+  - {fileID: 21300000, guid: 17dccf78d2ef4e708c2a696c2b0d8f88, type: 3}
+  - {fileID: 21300000, guid: b5ab79137995451297adc004ffc0dca0, type: 3}
+  - {fileID: 21300000, guid: 349949d789a3487187913ef4af091be9, type: 3}
+  - {fileID: 21300000, guid: 0122a9782f614e9492c5d67f443e4d9d, type: 3}
+  - {fileID: 21300000, guid: 3e7b79352faf4701a60206977f8e6bab, type: 3}
+  - {fileID: 21300000, guid: 3e7b79352faf4701a60206977f8e6bab, type: 3}
+  - {fileID: 21300000, guid: 38136e773ba4414d8b8e622098908cf5, type: 3}
+  - {fileID: 21300000, guid: 4d3c257bc8404f30b4bd73c53e578304, type: 3}
+  - {fileID: 21300000, guid: 3e7b79352faf4701a60206977f8e6bab, type: 3}
+  - {fileID: 21300000, guid: 3e7b79352faf4701a60206977f8e6bab, type: 3}
+  - {fileID: 21300000, guid: 3e7b79352faf4701a60206977f8e6bab, type: 3}
+  - {fileID: 21300000, guid: 2b21b5a48c76429994b9d70a5bbecab5, type: 3}
+  - {fileID: 21300000, guid: e8b8f822b4dc4dc8b77a06f937a2d7cc, type: 3}
+  - {fileID: 21300000, guid: 50517571c67f41bbb2fd55068be44d45, type: 3}
+  EnemyBossBasesSprites2:
+  - {fileID: 21300000, guid: 676c675652f943e4a2e7caab29afbfc9, type: 3}
+  - {fileID: 21300000, guid: 87af61f9daa5453586858246de1bc223, type: 3}
+  - {fileID: 21300000, guid: fee192b2b1d5485e895825149f93f65c, type: 3}
+  - {fileID: 21300000, guid: de410dd329f746d59cf8f53305a58b3a, type: 3}
+  - {fileID: 21300000, guid: 0a7f9d401ee8458f8128f15f4e533030, type: 3}
+  - {fileID: 21300000, guid: 676c675652f943e4a2e7caab29afbfc9, type: 3}
+  - {fileID: 21300000, guid: 676c675652f943e4a2e7caab29afbfc9, type: 3}
+  - {fileID: 21300000, guid: 2c296c9467f24e57a15e4a596e51c3d9, type: 3}
+  - {fileID: 21300000, guid: af26e10465684728b2d528d36b21b50b, type: 3}
+  - {fileID: 21300000, guid: 676c675652f943e4a2e7caab29afbfc9, type: 3}
+  - {fileID: 21300000, guid: 676c675652f943e4a2e7caab29afbfc9, type: 3}
+  - {fileID: 21300000, guid: 676c675652f943e4a2e7caab29afbfc9, type: 3}
+  - {fileID: 21300000, guid: 72705d1eea0d425c9eeaa45cb12cbf56, type: 3}
+  - {fileID: 21300000, guid: af4319f59f994cd39a8babf7a9dc1a4d, type: 3}
+  - {fileID: 21300000, guid: 21a22e4e4ab04c54890c6441a6700ae1, type: 3}
+  EnemyBaseFlash: {fileID: 21300000, guid: 728bfb55c3a54dcba33a890a10a529a9, type: 3}
+  EnemyBossBaseFlash: {fileID: 21300000, guid: 7cab77ae925b4943ba59fd484bfdfc14, type: 3}
+  EnemyTowerBaseFlash: {fileID: 21300000, guid: 1cec9136354a4fea9837311c260b08dc, type: 3}
+  EnemyTowerBase: {fileID: 21300000, guid: 090f0dbac177401aa044d23935bd3aab, type: 3}

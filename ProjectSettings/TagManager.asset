@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - EnemySpawnPoint
+  - PlayerSpawnPoint
+  - TurretSpawnPoint
+  - PlayersLaser
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PlayerBullets
+  - PlayersTankBase
+  - Obstacles
+  - EnemyTankBase
+  - EnemyBullets
+  - EnemiesSpawner
+  - DestructableObstacles
+  - Bonuses
+  - ExplodedTankParts
+  - HitPlayerOnly
+  - PlayerBulletsNoSpawners
+  - Mines
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: "GroundTiles"
+    uniqueID: 374746657
+    locked: 0
+  - name: "ShardDecals"
+    uniqueID: 2339595959
+    locked: 0
+  - name: "ExplosionDecals"
+    uniqueID: 3318383091
+    locked: 0
+  - name: "TracksDirt"
+    uniqueID: 3254442385
+    locked: 0
+  - name: "FlyingWallShards"
+    uniqueID: 2774810909
+    locked: 0
+  - name: "Walls"
+    uniqueID: 591319297
+    locked: 0
+  - name: "Default"
+    uniqueID: 0
+    locked: 0
+  - name: "BulletSleeves"
+    uniqueID: 2619682495
+    locked: 0
+  - name: "BigParticles"
+    uniqueID: 2870555155
+    locked: 0
+  - name: "EnemySpawners"
+    uniqueID: 305777267
+    locked: 0
+  - name: "EnemySpawnerIndicators"
+    uniqueID: 3316517329
+    locked: 0
+  - name: "MoveableDestructableObstacles"
+    uniqueID: 3507915833
+    locked: 0
+  - name: "CoinBonuses"
+    uniqueID: 2175533873
+    locked: 0
+  - name: "Bonuses"
+    uniqueID: 1984578849
+    locked: 0
+  - name: "PlayerAimingLine"
+    uniqueID: 3661396417
+    locked: 0
+  - name: "TankMovePointer"
+    uniqueID: 177390237
+    locked: 0
+  - name: "EnemyTankBases"
+    uniqueID: 3897877449
+    locked: 0
+  - name: "EnemyTankTurrets"
+    uniqueID: 4107385745
+    locked: 0
+  - name: "TankShootPointer"
+    uniqueID: 1565149059
+    locked: 0
+  - name: "PlayerTankBase"
+    uniqueID: 1411653669
+    locked: 0
+  - name: "PlayerTankTurret"
+    uniqueID: 6079609
+    locked: 0
+  - name: "LaserRailgunBeams"
+    uniqueID: 2196881547
+    locked: 0
+  - name: "Bullets"
+    uniqueID: 3105328015
+    locked: 0
+  - name: "HitEffects"
+    uniqueID: 3211972863
+    locked: 0
+  - name: "EnemyIce"
+    uniqueID: 1499092069
+    locked: 0
+  - name: "SmokeParticles"
+    uniqueID: 3459789753
+    locked: 0
+  - name: "ExplosionSmoke"
+    uniqueID: 3009464807
+    locked: 0
+  - name: "ExplosionsAndFlashes"
+    uniqueID: 1970343051
+    locked: 0
+  - name: "ParticleSystemEffectsBase"
+    uniqueID: 1859173373
+    locked: 0
+  - name: "ParticleSystemEffectsDarkSmoke"
+    uniqueID: 3357397677
+    locked: 0
+  - name: "ParticleSystemEffectsSmoke"
+    uniqueID: 3257331019
+    locked: 0
+  - name: "ParticleSystemEffectsFlashes"
+    uniqueID: 3222547417
+    locked: 0
+  - name: "AdditiveShaderPS"
+    uniqueID: 237079725
+    locked: 0
+  - name: "AdditiveShaderPSUpper"
+    uniqueID: 992701339
+    locked: 0
+  - name: "Bushes"
+    uniqueID: 1188429947
+    locked: 0
+  - name: "HPBarPads"
+    uniqueID: 1080230155
+    locked: 0
+  - name: "HPBars"
+    uniqueID: 3177143383
+    locked: 0
+  - name: "EmoticonParticleSystemEffects"
+    uniqueID: 3844666209
+    locked: 0
+  - name: "WeatherParticleSystemEffects"
+    uniqueID: 3613085583
+    locked: 0
+  - name: "VisibilityCovers"
+    uniqueID: 451657929
+    locked: 0
+  - name: "TutorialText"
+    uniqueID: 331224063
+    locked: 0
+  - name: "UpperHitEffects"
+    uniqueID: 251471487
+    locked: 0
+  - name: "AnalogPadCenter"
+    uniqueID: 4150886535
+    locked: 0
+  - name: "AnalogPadTop"
+    uniqueID: 1929839869
+    locked: 0
+  - name: "UI"
+    uniqueID: 3900661873
+    locked: 0
+  - name: "OverUI"
+    uniqueID: 3041320597
+    locked: 0
+  - name: "ScenesFader"
+    uniqueID: 399679887
+    locked: 0

@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!224 &1790049682851897456
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -67.4, y: 196.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -67.4, y: 196.1}
+  m_SizeDelta: {x: 60, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1790049682851897454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790049682851897456}
+  - component: {fileID: 1790049682851897455}
+  - component: {fileID: 1790049682851897457}
+  - component: {fileID: 1790049682851897458}
+  m_Layer: 5
+  m_Name: "LevelEditorItem"
+  m_TagString:
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!222 &1790049682851897455
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: 
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &1790049682851897457
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 1fa7039b96eb49cc8fba064376c75276, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: "UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+    Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+  m_Sprite: {fileID: 21300000, guid: a72907b95db34a569b3e788d573ad595, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!114 &1790049682851897458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12924b5a685c1e2a036f6c0ddb06e1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EditorSpawnerSprites:
+  - {fileID: 21300000, guid: 26a9192cbd1a451c956435e946c69091, type: 3}
+  - {fileID: 21300000, guid: 3c10cedca9b4463cb620471485d272ca, type: 3}
+  - {fileID: 21300000, guid: 8ae4d0748ce047f7aff69fdd8ef1b5ff, type: 3}
+  - {fileID: 21300000, guid: 458d5879fc654e3996e08f1fbb6d86f8, type: 3}
+  - {fileID: 21300000, guid: 920657803d22485f85def95b3d9bac32, type: 3}
+  - {fileID: 21300000, guid: c47c78bcc68548dba13812589e74f0b7, type: 3}
+  - {fileID: 21300000, guid: fbe42da8d7bd459ab50f465a19e131cd, type: 3}
+  - {fileID: 21300000, guid: a4d925a84f954d9d8fa436906f804d4b, type: 3}
+  - {fileID: 21300000, guid: 59d434edd97247e490ce21f79e21d780, type: 3}
+  - {fileID: 21300000, guid: f321f9732bc84f659463bc54dd96a87d, type: 3}
+  EditorTurretSprites:
+  - {fileID: 21300000, guid: a7552483519d4d078e603e26a52c22d8, type: 3}
+  - {fileID: 21300000, guid: 00eecbc0634c4f3aaf7ad91ea7ad126e, type: 3}
+  - {fileID: 21300000, guid: a1cf5c5b8e21446d88b109f219add117, type: 3}
+  - {fileID: 21300000, guid: aa498654b4e14e5395a427eb943038d2, type: 3}
+  - {fileID: 21300000, guid: 50655eeaafd44499a8295aee9a1dd124, type: 3}
+  - {fileID: 21300000, guid: 8ccaf482aa634cab8374986d8966e019, type: 3}
+  - {fileID: 21300000, guid: ad44c9889f734f40881224979ce694cb, type: 3}
+  - {fileID: 21300000, guid: 80719fee651d42d1904036a3c770647d, type: 3}
+  - {fileID: 21300000, guid: f7bb81b0a3af4343b993cdfc79607ec7, type: 3}
+  - {fileID: 21300000, guid: 307134ac7c654941a1b11520f968befb, type: 3}
+  EditorBossSprites:
+  - {fileID: 21300000, guid: 8e7cad50a07b44a2b66ea6101ca5e29a, type: 3}
+  - {fileID: 21300000, guid: 2f0be4cc1e6b4d969f93301ab3fd54c5, type: 3}
+  - {fileID: 21300000, guid: cf47533e48014cd3b3d2839e2043537b, type: 3}
+  - {fileID: 21300000, guid: 2eea05bbc0bc4260964cb87f0f14f46a, type: 3}
+  - {fileID: 21300000, guid: bd9331a3146449c28ce525b05b69044c, type: 3}
+  - {fileID: 21300000, guid: e83dd3b8239c4c8cbd98d4b21f58a5ac, type: 3}
+  - {fileID: 21300000, guid: 5869edfff28b4848af7c017207e9e6ea, type: 3}
+  - {fileID: 21300000, guid: ef9d9f0bf73a4fc5b5ad3144098f95fe, type: 3}
+  - {fileID: 21300000, guid: d47556db1e2749bcb6075c3342d40309, type: 3}
+  - {fileID: 21300000, guid: d3c8e399a86d45a58b237cf25e07dc61, type: 3}
+  EditorEnemySprites:
+  - {fileID: 21300000, guid: 848622081ad547b9bcc757d464069de5, type: 3}
+  - {fileID: 21300000, guid: 248a0d62e7914442b8da1c3c1130d29b, type: 3}
+  - {fileID: 21300000, guid: b1b546a4f0ef497dbdd6d44a3d297f5c, type: 3}
+  - {fileID: 21300000, guid: a3dcea4dd3004d86adb33e213e595222, type: 3}
+  - {fileID: 21300000, guid: 4d09646c88e343f38bc02649425b008b, type: 3}
+  - {fileID: 21300000, guid: 399b5a5c50c44b62b34d3a095cd3358d, type: 3}
+  - {fileID: 21300000, guid: 19e659c64fbd4a50ba272f10ef7acd41, type: 3}
+  - {fileID: 21300000, guid: bc9a5367ed9f4838a019dddfb1aba57f, type: 3}
+  - {fileID: 21300000, guid: 3c8451642ba74ddc8b0ac27d371c20d5, type: 3}
+  - {fileID: 21300000, guid: c984fc84d570473785d50fe0475a21c4, type: 3}
+  - {fileID: 21300000, guid: 0feba019d7a146bc81271392acb19710, type: 3}
+  EditorPlayerSpawnSprite: {fileID: 21300000, guid: 51e98a0e4c7a4ac8a056f56bc7bef7b0, type: 3}
+  EditorEmptySprite: {fileID: 21300000, guid: 3748dd2c1922463080ab0dcfd329f941, type: 3}
+  WallSprite: {fileID: 21300000, guid: 8afff06a13144d66af6e566bdab1a44b, type: 3}
+  HarderWallSprite: {fileID: 21300000, guid: 6205a2055520436bbbb234f22b7de626, type: 3}
+  IndestructibleWallSprite: {fileID: 21300000, guid: a91775eb575b4caca27fb6fa5b27adbe, type: 3}
+  IndestructibleWallCrackedSprite: {fileID: 21300000, guid: 368c8b603dfb4252aeb0cc97df1d67e6, type: 3}
+  SpecialWallSprite: {fileID: 21300000, guid: 0c2ed36e67084a2eb6bc9a523387bf12, type: 3}
+  BonusCrateSprite: {fileID: 21300000, guid: ff213bdc673b4be1b5003872fe74de1c, type: 3}
+  ExplosiveBarrelSprite: {fileID: 21300000, guid: d2176566954842ed8c8887b92712c0c1, type: 3}
+  CornerBottomLeftSprite: {fileID: 21300000, guid: 77c416518a59480e8e2ed9c939836e8a, type: 3}
+  CornerBottomRightSprite: {fileID: 21300000, guid: 9ff8617dbe3743f6969bcc23a60fe4e7, type: 3}
+  CornerTopRightSprite: {fileID: 21300000, guid: 70885450dc294264a88c0ae94a6b214f, type: 3}
+  CornerTopLeftSprite: {fileID: 21300000, guid: 01cfc61200eb4e63af2cd4b8159532a2, type: 3}
+  IndestructibleCornerBottomLeftSprite: {fileID: 21300000, guid: 0e802410d8284a7aabe929f8f1d2deac, type: 3}
+  IndestructibleCornerBottomRightSprite: {fileID: 21300000, guid: 009f8ae65c674966aff25335cd141a64, type: 3}
+  IndestructibleCornerTopRightSprite: {fileID: 21300000, guid: 86689a5f72974e379515615c33b95a04, type: 3}
+  IndestructibleCornerTopLeftSprite: {fileID: 21300000, guid: 049166276c24466b896115a54b4a4873, type: 3}
+  GrassSprite: {fileID: 21300000, guid: 75b3b1405c794854846f151d11040362, type: 3}
+  rectTransform: {fileID: 0}
+  Bush: {fileID: 21300000, guid: 3c003c9b1e644f6783f5be83c1641404, type: 3}
+  LockedItemSprite: {fileID: 21300000, guid: cffa20d274f549d6803f8fabff37bc63, type: 3}
+  UnderConstructionItemSprite: {fileID: 21300000, guid: ca889323c6564a7599daff8e53ab859a, type: 3}

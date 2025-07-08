@@ -1,0 +1,11 @@
+tanks.coinpack1
+
+tanks.coinpack2
+
+tanks.coinpack3
+
+tanks.coinpack4
+
+tanks.coinpack5
+
+tanks.coinpack6

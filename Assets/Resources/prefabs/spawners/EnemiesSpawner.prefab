@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!4 &1790049682851897455
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.056379, y: -0.04913426, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1790049682851897454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790049682851897455}
+  - component: {fileID: 1790049682851897457}
+  - component: {fileID: 1790049682851897458}
+  - component: {fileID: 1790049682851897456}
+  m_Layer: 13
+  m_Name: "EnemiesSpawner"
+  m_TagString:
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1790049682851897456
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.09, y: 1.09}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.09, y: 1.09}
+  m_EdgeRadius: 0
+--- !u!212 &1790049682851897457
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RenderingLayerMask: 4294967295
+  m_LightmapIndex: 65535
+  m_LightmapIndexDynamic: 65535
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_LightmapTilingOffsetDynamic: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 1fa7039b96eb49cc8fba064376c75276, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_SortingLayerID: 305777267
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 5f395cc0f3ee437f8aa982ebfce1415c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &1790049682851897458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90edcdc2a49964dcc7b4301365a276ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnerSprites:
+  - {fileID: 21300000, guid: 5f395cc0f3ee437f8aa982ebfce1415c, type: 3}
+  - {fileID: 21300000, guid: db1b1a7a56bd4f2ba6f7e535dc549df9, type: 3}
+  - {fileID: 21300000, guid: fae4c02187c747b5914b407177800f33, type: 3}
+  - {fileID: 21300000, guid: 268c922cd3f14cfe86dbdd4b7338eefc, type: 3}
+  - {fileID: 21300000, guid: 2132da84d514403c9a68f69a087ddcd1, type: 3}
+  - {fileID: 21300000, guid: d6f206cf41d94a839c15c78b3140a402, type: 3}
+  - {fileID: 21300000, guid: e5a4e6e42a464f58b5d812206e48ae82, type: 3}
+  - {fileID: 21300000, guid: 084f7fe8ee404f0597a848afa0978bbe, type: 3}
+  - {fileID: 21300000, guid: 95b6266a27b14b479da036d9b31b5f45, type: 3}
+  - {fileID: 21300000, guid: 68aaca87f3e9458d82b50c5b99eccead, type: 3}
+  DamagedSpawnerSprites:
+  - {fileID: 21300000, guid: 6369f94927f649e1a4725972eb667cb3, type: 3}
+  - {fileID: 21300000, guid: 02f0d76bcb9c4e27ac12e16d19b0aee6, type: 3}
+  - {fileID: 21300000, guid: b710aa2c1f4c4d50a88b81f9a5e678b7, type: 3}
+  - {fileID: 21300000, guid: 67cbd61d48e44790af44559135ade9ee, type: 3}
+  - {fileID: 21300000, guid: 0ba411cd4ae24e1ba544f70626dfc281, type: 3}
+  - {fileID: 21300000, guid: f81e493bb82f4ec092c3a23d3fe61975, type: 3}
+  - {fileID: 21300000, guid: 1cf5188dc81342d6a9f289a267e07850, type: 3}
+  - {fileID: 21300000, guid: 36e325d2625548aba56334b1f7d65083, type: 3}
+  - {fileID: 21300000, guid: 117cb7adf17641cd88e380a07398de28, type: 3}
+  - {fileID: 21300000, guid: 2c45f0999f164d46bf1b101931937ec0, type: 3}
+  SpawnerItemsIndicatorsSprites:
+  - {fileID: 21300000, guid: d14b0bae1c094d57a0be6e2bea64c0c8, type: 3}
+  - {fileID: 21300000, guid: 0567dbd80524419db6ec41b1ec5ac01e, type: 3}
+  - {fileID: 21300000, guid: a51ccf300c554cafaeb055645dc6bdd9, type: 3}
+  - {fileID: 21300000, guid: a9fef48a75c2427dbf8b635f7b278e82, type: 3}
+  - {fileID: 21300000, guid: 20b7a4eda3234b12ae6ab79b233113fe, type: 3}
+  - {fileID: 21300000, guid: 91ff2d1602ea4cc2b56b364d120d9c5b, type: 3}
+  - {fileID: 21300000, guid: f17ea15cb2c94190b0ba0860bd44afa7, type: 3}
+  - {fileID: 21300000, guid: d09d34f0d0a34c97867bd9fd07dcc98c, type: 3}
+  FullTileFlash: {fileID: 21300000, guid: 88ece67bf4234b0aa126074eb272e715, type: 3}

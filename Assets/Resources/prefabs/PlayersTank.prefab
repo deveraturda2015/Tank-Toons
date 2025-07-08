@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!4 &1790049682851897455
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.37, y: 1.531746, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1790049682851897454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790049682851897455}
+  - component: {fileID: 1790049682851897456}
+  m_Layer: 0
+  m_Name: "PlayersTank"
+  m_TagString:
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1790049682851897456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790049682851897454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8834aa39253140f8dbbf32ffefcce1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerTurretsSprites:
+  - {fileID: 21300000, guid: c990234249654c20a661cabfc3945474, type: 3}
+  - {fileID: 21300000, guid: f71dcd54bd9e4219b57082f12feba95c, type: 3}
+  - {fileID: 21300000, guid: 46d2beec890b4362b29eea1db86d6eeb, type: 3}
+  - {fileID: 21300000, guid: 41180e4dad0c46edbe527586e19400be, type: 3}
+  - {fileID: 21300000, guid: ea2dc9895f1f4cc0868466d97ff06f9b, type: 3}
+  - {fileID: 21300000, guid: 8b88358a8f4e4dc987acdc98a5be91d9, type: 3}
+  - {fileID: 21300000, guid: f81f88882aba456abfe4240641c0ecb4, type: 3}
+  - {fileID: 21300000, guid: 08db065bc4ff49599fbba9b6adfbd6dc, type: 3}
+  - {fileID: 21300000, guid: 2fe4f2b12504476d9aa022ccd071d82c, type: 3}
+  - {fileID: 21300000, guid: 2fe4f2b12504476d9aa022ccd071d82c, type: 3}
+  - {fileID: 21300000, guid: 2fe4f2b12504476d9aa022ccd071d82c, type: 3}
+  - {fileID: 21300000, guid: 2fe4f2b12504476d9aa022ccd071d82c, type: 3}
+  - {fileID: 21300000, guid: 00fc107823184e93b4c10a8d81ccfb9b, type: 3}
+  - {fileID: 21300000, guid: 5dff2eee6c864b90b59b675ddd67caad, type: 3}
+  - {fileID: 21300000, guid: a8eaae17fd614286b26ebc2b453460c8, type: 3}
+  PlayerBaseSprites:
+  - {fileID: 21300000, guid: b3e93db7b05f460c96aaeb0ec4459507, type: 3}
+  - {fileID: 21300000, guid: 6faf5a2519244625933799c61a7dd0f5, type: 3}
+  PlayerTurretsFlashSprites:
+  - {fileID: 21300000, guid: 1c321fe5e5144de686e33fda45857c74, type: 3}
+  - {fileID: 21300000, guid: 1bd7c0917e9b40259bee32c188161b2b, type: 3}
+  - {fileID: 21300000, guid: 347f137389904edea65d224f95ad4c0e, type: 3}
+  - {fileID: 21300000, guid: f3bebfdb819548e194570b712eec30a9, type: 3}
+  - {fileID: 21300000, guid: c2fff8b68db342c5a7d99adb758d85ef, type: 3}
+  - {fileID: 21300000, guid: 4812e58f181745f0aec68250b607defd, type: 3}
+  - {fileID: 21300000, guid: 7d7021da676e447c8a6b3b308c53f671, type: 3}
+  - {fileID: 21300000, guid: 43516126f8f9405ca2e6863b18d17740, type: 3}
+  - {fileID: 21300000, guid: c5e3cbfb039b4aae817d745c09cf4327, type: 3}
+  - {fileID: 21300000, guid: c5e3cbfb039b4aae817d745c09cf4327, type: 3}
+  - {fileID: 21300000, guid: c5e3cbfb039b4aae817d745c09cf4327, type: 3}
+  - {fileID: 21300000, guid: c5e3cbfb039b4aae817d745c09cf4327, type: 3}
+  - {fileID: 21300000, guid: b1237a40cc494aebb9c80967d7111bca, type: 3}
+  - {fileID: 21300000, guid: 9fa8d1591ef742fbbd544ee5a818ed58, type: 3}
+  - {fileID: 21300000, guid: ad173d9db8b44267b7c236addd1a5edc, type: 3}
+  PlayerBaseFlashSprite: {fileID: 21300000, guid: 728bfb55c3a54dcba33a890a10a529a9, type: 3}
+  PlayersBaseDestroyedSprite: {fileID: 21300000, guid: fb6869bce1604553acaa70363b90106d, type: 3}
