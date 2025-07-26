@@ -144,7 +144,9 @@ public class GameplayCommons : MonoBehaviour
 		levelBuilder = UnityEngine.Object.FindObjectOfType<LevelBuilder>();
 		gameplayUIController = UnityEngine.Object.FindObjectOfType<GameplayUIController>();
 		visibilityController = UnityEngine.Object.FindObjectOfType<VisibilityController>();
+
 		autoaimPointerController = UnityEngine.Object.Instantiate(Prefabs.autoaimPointerPrefab).GetComponent<AutoaimPointerController>();
+
 		if (GlobalCommons.Instance.gameplayMode == GlobalCommons.GameplayModes.TutorialLevel)
 		{
 			tutorialController = new TutorialController();
@@ -159,7 +161,9 @@ public class GameplayCommons : MonoBehaviour
 			UnityEngine.Object.Destroy(GameObject.Find("TutorialSpawnerSprite"));
 		}
 		PauseItemsGO = UnityEngine.Object.Instantiate(GlobalCommons.Instance.GetPauseItemsGO());
+
 		PauseItemsGO.transform.SetParent(canvas.transform, worldPositionStays: false);
+
 		Text component = PauseItemsGO.transform.Find("TipText").GetComponent<Text>();
 		component.text = LoadingSceneController.GetCurrentTankmanPhrase();
 		Image component2 = PauseItemsGO.transform.Find("TankmanImage").GetComponent<Image>();
@@ -288,9 +292,12 @@ public class GameplayCommons : MonoBehaviour
 	{
 		if (LevelFullyInitialized && !levelStateController.GameplayStopped && !levelStateController.LevelCompletionPending && (gamePaused || !(instance.playersTankController.HPPercentage <= 0f)))
 		{
-			if (gamePaused)
+            AdmobManager.instance.ShowBanner();
+
+            if (gamePaused)
 			{
-				gamePaused = false;
+
+                gamePaused = false;
 				desiredTimeScale = 1f;
 				instance.touchesController.ResetAllTouches();
 			}

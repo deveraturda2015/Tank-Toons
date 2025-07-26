@@ -18,6 +18,8 @@ public class StatsAchievementsMenuController : MonoBehaviour
 
 	private void Start()
 	{
+		AdmobManager.instance.HideBanner();
+
 		Canvas component = GameObject.Find("Canvas").GetComponent<Canvas>();
 		descriptionHeader = GameObject.Find("DescriptionHeader").GetComponent<Text>();
 		descriptionText = GameObject.Find("DescriptionText").GetComponent<Text>();

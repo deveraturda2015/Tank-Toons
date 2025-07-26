@@ -73,6 +73,7 @@ public class CurrentTargetDisplayController : MonoBehaviour
 
 	private void DisableAndRemove()
 	{
-		UnityEngine.Object.Destroy(base.gameObject);
+
+        UnityEngine.Object.Destroy(base.gameObject);
 	}
 }

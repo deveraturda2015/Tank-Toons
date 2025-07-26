@@ -133,6 +133,8 @@ public class SettingsMenuController : MonoBehaviour
 
 	private void OKButtonClick()
 	{
+		AdmobManager.instance.ShowBanner();
+
 		SoundManager.instance.PlayButtonClickSound();
 		GlobalCommons.Instance.SaveGame();
 		UnityEngine.Object.Destroy(base.gameObject);

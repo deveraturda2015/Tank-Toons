@@ -7,6 +7,7 @@ public class PrizeController : MonoBehaviour
 	private void Start()
 	{
 		prizeSceneController = UnityEngine.Object.FindObjectOfType<PrizeSceneController>();
+
 	}
 
 	private void Update()

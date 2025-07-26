@@ -19,11 +19,11 @@ public class PrizeSceneController : MonoBehaviour
 
 	private GameObject FloorGO;
 
-	private TextMeshProUGUI CountdownText;
+	private Text CountdownText;
 
 	private RectTransform CountdownTextRT;
 
-	private TextMeshProUGUI AwesomeText;
+	private Text AwesomeText;
 
 	private float countdownScaleBig = 1.2f;
 
@@ -51,7 +51,7 @@ public class PrizeSceneController : MonoBehaviour
 
 	private Button BackButton;
 
-	private TextMeshProUGUI ResultsAwesomeText;
+	private Text ResultsAwesomeText;
 
 	private CanvasGroup ResultsBlockCG;
 
@@ -85,14 +85,21 @@ public class PrizeSceneController : MonoBehaviour
 		ResultsBlockCG = GameObject.Find("ResultsBlock").GetComponent<CanvasGroup>();
 		ResultsBlockCG.gameObject.SetActive(value: false);
 		ProfitText = ResultsBlockCG.gameObject.transform.Find("ProfitText").GetComponent<Text>();
-		ResultsAwesomeText = ResultsBlockCG.gameObject.transform.Find("ResultsAwesomeText").GetComponent<TextMeshProUGUI>();
+		ResultsAwesomeText = ResultsBlockCG.gameObject.transform.Find("ResultsAwesomeText").GetComponent<Text>();
+
 		BackButton = ResultsBlockCG.gameObject.transform.Find("BackButton").GetComponent<Button>();
+
+
 		BackButton.onClick.AddListener(delegate
 		{
 			BackButtonClick();
 		});
-		int num = GlobalCommons.Instance.globalGameStats.MaxLevelIncome;
+
+        AdmobManager.instance.ShowBanner();
+
+        int num = GlobalCommons.Instance.globalGameStats.MaxLevelIncome;
 		int num2 = Mathf.CeilToInt(12.195f);
+
 		if (num < num2)
 		{
 			num = num2;
@@ -101,10 +108,10 @@ public class PrizeSceneController : MonoBehaviour
 		prizeHP = prizeHPMax;
 		prizeSR = GameObject.Find("Prize").GetComponent<SpriteRenderer>();
 		prizeRB = prizeSR.GetComponent<Rigidbody2D>();
-		CountdownText = GameObject.Find("CountdownText").GetComponent<TextMeshProUGUI>();
+		CountdownText = GameObject.Find("CountdownText").GetComponent<Text>();
 		CountdownTextRT = CountdownText.GetComponent<RectTransform>();
 		CountdownText.text = "4";
-		AwesomeText = GameObject.Find("AwesomeText").GetComponent<TextMeshProUGUI>();
+		AwesomeText = GameObject.Find("AwesomeText").GetComponent<Text>();
 		CountdownText.SetAlpha(0f);
 		AwesomeText.SetAlpha(0f);
 		GlobalCommons.Instance.SaveGame();
@@ -116,6 +123,7 @@ public class PrizeSceneController : MonoBehaviour
 		GlobalCommons.Instance.globalGameStats.IncreaseMoney(coinsGot);
 		GlobalCommons.Instance.globalGameStats.PrizeLevel++;
 		GlobalCommons.Instance.globalGameStats.LastTimeGotPrize = DateTime.Now;
+		AdmobManager.instance.HideBanner();
 		SoundManager.instance.PlayButtonClickSound();
 		GlobalCommons.Instance.StateFaderController.ChangeSceneTo("Upgrades");
 	}
@@ -277,12 +285,12 @@ public class PrizeSceneController : MonoBehaviour
 			UnityEngine.Object.Destroy(prizeRB.gameObject);
 			AwesomeText.DOKill();
 			CountdownText.DOKill();
-			AwesomeText.DOFade(0f, 0.5f);
+			AwesomeText.DOFade(0f, 1);
 			if (GlobalCommons.Instance.globalGameStats.DoubleCoinsPurchased)
 			{
 				coinsGot *= 2;
 			}
-			CountdownText.DOFade(0f, 0.5f).OnCompleteWithCoroutine(FadeInResults);
+			CountdownText.DOFade(0f, 1f).OnCompleteWithCoroutine(FadeInResults);
 			effectsSpawner.CreateExplosionEffect(prizeRB.transform.position, 1f, playSound: false, spawnDarkSmoke: false);
 		}
 		else
@@ -354,7 +362,7 @@ public class PrizeSceneController : MonoBehaviour
 	{
 		CountdownText.DOKill();
 		CountdownText.transform.DOKill();
-		CountdownText.fontSize = 100f;
+		//CountdownText.fontSize = 100f;
 		CountdownTextRT.anchoredPosition = new Vector2(0f, 100f);
 		if (CountdownText.text != LocalizationManager.Instance.GetLocalizedText("PrizeOuch"))
 		{
@@ -367,12 +375,12 @@ public class PrizeSceneController : MonoBehaviour
 		}
 		if (currentComboValue == 0)
 		{
-			CountdownText.SetAlpha(0.5f);
+			CountdownText.SetAlpha(1f);
 			AwesomeText.SetAlpha(0f);
 			CountdownText.text = LocalizationManager.Instance.GetLocalizedText("PrizeOuch");
 			return;
 		}
-		AwesomeText.SetAlpha(0.5f);
+		AwesomeText.SetAlpha(1f);
 		string text = string.Empty;
 		if (currentComboValue >= 10)
 		{
@@ -403,7 +411,7 @@ public class PrizeSceneController : MonoBehaviour
 		if (currentComboValue > 1)
 		{
 			CountdownText.text = currentComboValue.ToString() + LocalizationManager.Instance.GetLocalizedText("GameplayUICombo") + "!";
-			CountdownText.SetAlpha(0.5f);
+			CountdownText.SetAlpha(1f);
 		}
 		else
 		{

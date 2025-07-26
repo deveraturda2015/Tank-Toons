@@ -25,7 +25,7 @@ public class FightSign : MonoBehaviour
 		signImage = GetComponent<Image>();
 		appearTimeStamp = Time.fixedTime;
 		rt = GetComponent<RectTransform>();
-		rt.anchoredPosition = new Vector2(0f, 75f);
+		rt.anchoredPosition = new Vector2(0f, 5f);
 		Vector3 localScale = rt.localScale;
 		initialScale = localScale.x * 0.75f;
 		float num = 1.25f;

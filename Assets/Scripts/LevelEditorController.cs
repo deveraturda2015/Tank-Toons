@@ -379,6 +379,8 @@ public class LevelEditorController : MonoBehaviour
 
 	private void Start()
 	{
+		AdmobManager.instance.ShowBanner();
+
 		if (false || LoadPlayersCustomLevel)
 		{
 			LoadPlayersCustomLevel = false;

@@ -1,6 +1,7 @@
 using DG.Tweening;
 using GooglePlayGames;
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ public class MainMenuController : MonoBehaviour
 
 	private Button EditorButton;
 
-	private Image AwesomeText;
+	//private Image AwesomeText;
 
 	private Image TanksText;
 
@@ -42,51 +43,63 @@ public class MainMenuController : MonoBehaviour
 
 	private bool checkShopEnable;
 
+	public GameObject LoadingObj;
+
+	public static bool LoadingscreenShown;
+
 	private void Start()
 	{
+		GlobalCommons.Instance.globalGameStats.TutorialCompleted = true;
 
-		float num = 80f;
-		AwesomeText = GameObject.Find("AwesomeText").GetComponent<Image>();
-		RectTransform rectTransform = AwesomeText.rectTransform;
-		Vector2 anchoredPosition = AwesomeText.rectTransform.anchoredPosition;
-		float x = anchoredPosition.x;
-		Vector2 anchoredPosition2 = AwesomeText.rectTransform.anchoredPosition;
-		rectTransform.anchoredPosition = new Vector2(x, anchoredPosition2.y + num);
-		RectTransform rectTransform2 = AwesomeText.rectTransform;
-		Vector2 anchoredPosition3 = AwesomeText.rectTransform.anchoredPosition;
-		float x2 = anchoredPosition3.x;
-		Vector2 anchoredPosition4 = AwesomeText.rectTransform.anchoredPosition;
-		rectTransform2.DOAnchorPos(new Vector2(x2, anchoredPosition4.y - num), 0.33f);
-		AwesomeText.SetAlpha(0f);
-		AwesomeText.DOFade(1f, 0.33f);
-		//TanksText = GameObject.Find("TanksText").GetComponent<Image>();
-		//RectTransform rectTransform3 = TanksText.rectTransform;
-		//Vector2 anchoredPosition5 = TanksText.rectTransform.anchoredPosition;
-		//float x3 = anchoredPosition5.x;
-		//Vector2 anchoredPosition6 = TanksText.rectTransform.anchoredPosition;
-		//rectTransform3.anchoredPosition = new Vector2(x3, anchoredPosition6.y + num);
-		//RectTransform rectTransform4 = TanksText.rectTransform;
-		//Vector2 anchoredPosition7 = TanksText.rectTransform.anchoredPosition;
-		//float x4 = anchoredPosition7.x;
-		//Vector2 anchoredPosition8 = TanksText.rectTransform.anchoredPosition;
-		//rectTransform4.DOAnchorPos(new Vector2(x4, anchoredPosition8.y - num), 0.33f).SetDelay(0.15f);
-		//TanksText.SetAlpha(0f);
-		//TanksText.DOFade(1f, 0.33f).SetDelay(0.15f);
+		if (!LoadingscreenShown)
+		{
+			LoadingObj.SetActive(true);
+            LoadingscreenShown = true;
+
+            StartCoroutine(CloseLoadingScreen());
+		}
+		else
+		{
+            LoadingObj.SetActive(false);
+        }
+
+
+        AdmobManager.instance.ShowBanner();
+
+        float num = 80f;
+	//	//AwesomeText = GameObject.Find("AwesomeText").GetComponent<Image>();
+	//	//RectTransform rectTransform = AwesomeText.rectTransform;
+	////	Vector2 anchoredPosition = AwesomeText.rectTransform.anchoredPosition;
+	//	float x = anchoredPosition.x;
+	//	//Vector2 anchoredPosition2 = AwesomeText.rectTransform.anchoredPosition;
+	//	//rectTransform.anchoredPosition = new Vector2(x, anchoredPosition2.y + num);
+	//	RectTransform rectTransform2 = AwesomeText.rectTransform;
+	//	Vector2 anchoredPosition3 = AwesomeText.rectTransform.anchoredPosition;
+	//	float x2 = anchoredPosition3.x;
+	//	Vector2 anchoredPosition4 = AwesomeText.rectTransform.anchoredPosition;
+	//	rectTransform2.DOAnchorPos(new Vector2(x2, anchoredPosition4.y - num), 0.33f);
+	//	AwesomeText.SetAlpha(0f);
+	//	AwesomeText.DOFade(1f, 0.33f);
+		
 		playButton = GameObject.Find("PlayButton").GetComponent<Button>();
+
 		playButton.onClick.AddListener(delegate
 		{
 			PlayButtonClick();
 		});
+
 		playButtonImage = playButton.gameObject.GetComponent<Image>();
 		EditorButton = GameObject.Find("EditorButton").GetComponent<Button>();
 		EditorButton.onClick.AddListener(ProcessEditorButtonClick);
 		LimitedOfferBlock = GlobalCommons.Instance.CanvasBoundsController.UIRectTransform.Find("LimitedOfferBlock").gameObject;
 		LimitedOfferBlock.SetActive(value: false);
 		InfoButton = GameObject.Find("InfoButton").GetComponent<Button>();
+
 		InfoButton.onClick.AddListener(delegate
 		{
 			InfoButtonClick();
 		});
+
 		ShareButton = GameObject.Find("ShareButton").GetComponent<Button>();
 		//if (NativeShare.IsCurrentPlatformSupported)
 		//{
@@ -213,6 +226,12 @@ public class MainMenuController : MonoBehaviour
 			GlobalCommons.Instance.MessagesController.ShowSimpleMessage(LocalizationManager.Instance.GetLocalizedText("UnknownItemsUpdateGame"));
 		}
 	}
+
+	IEnumerator CloseLoadingScreen()
+	{
+		yield return new WaitForSeconds(4);
+		LoadingObj.SetActive(false);
+    }
 
 	private void ProcessEditorButtonClick()
 	{
@@ -345,20 +364,29 @@ public class MainMenuController : MonoBehaviour
 
 	private void InfoButtonClick()
 	{
+
 		GameObject gameObject = UnityEngine.Object.Instantiate(Prefabs.CreditsMenu, Vector3.zero, Quaternion.identity);
 		SoundManager.instance.PlayButtonClickSound();
 		gameObject.transform.SetParent(GameObject.Find("Canvas").transform, worldPositionStays: false);
-	}
 
-	public void SettingsButtonClick()
+        AdmobManager.instance.HideBanner();
+
+    }
+
+    public void SettingsButtonClick()
 	{
 		GameObject gameObject = UnityEngine.Object.Instantiate(Prefabs.SettingsMenu, Vector3.zero, Quaternion.identity);
 		SoundManager.instance.PlayButtonClickSound();
 		gameObject.transform.SetParent(GameObject.Find("Canvas").transform, worldPositionStays: false);
-	}
 
-	private void PlayButtonClick()
+        AdmobManager.instance.HideBanner();
+
+    }
+
+    private void PlayButtonClick()
 	{
+		AdmobManager.instance.HideBanner();
+
 		bool isEditor = Application.isEditor;
 		SoundManager.instance.PlayButtonClickSound();
 		RectTransform component = playButton.GetComponent<RectTransform>();
@@ -374,11 +402,13 @@ public class MainMenuController : MonoBehaviour
 		float y2 = x * 1.1f;
 		Vector3 localScale3 = component.localScale;
 		target.DOScale(new Vector3(x3, y2, localScale3.z), 0.17f);
+
 		if (GlobalCommons.Instance.globalGameStats.TutorialCompleted)
 		{
 			GlobalCommons.Instance.StateFaderController.ChangeSceneTo("Upgrades");
 			return;
 		}
+
 		GlobalCommons.Instance.globalGameStats.UseStaticControls = GlobalCommons.Instance.UseStaticControlsAsDefault;
 		SoundManager.instance.FadeOutMusic();
 		GlobalCommons.Instance.ActualSelectedLevel = 1;

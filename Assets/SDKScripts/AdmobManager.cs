@@ -194,11 +194,12 @@ public class AdmobManager : MonoBehaviour
 
     IEnumerator AdLoadDelay()
     {
-        yield return new WaitForSeconds(4);
-        if (OpenAdEnabled)
+        yield return new WaitForSeconds(1);
+        if (ShouldShowBanner)
         {
-            LoadAppOpenAd();
+            RequestBanner();
         }
+       
         yield return new WaitForSeconds(1);
         if (RewardedAdEnabled)
         {
@@ -207,11 +208,10 @@ public class AdmobManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         LoadInterstitialAd();
         yield return new WaitForSeconds(1);
-        if (ShouldShowBanner)
+        if (OpenAdEnabled)
         {
-            RequestBanner();
-        }     
-
+            LoadAppOpenAd();
+        }
     }
 
     /// <summary>
@@ -493,38 +493,23 @@ public class AdmobManager : MonoBehaviour
         if(hide)
         {
             yield return new WaitForSeconds(0.2f);
-            if(bannerView !=null)
+            Debug.Log("BANNER HIDE");
+
+            if (bannerView !=null)
             {
                 bannerView.Hide();
             }
-            yield return new WaitForSeconds(0.2f);
-            if (bannerView != null)
-            {
-                bannerView.Hide();
-            }
-            yield return new WaitForSeconds(0.2f);
-            if (bannerView != null)
-            {
-                bannerView.Hide();
-            }
+                 
         }
         else
         {
             yield return new WaitForSeconds(0.2f);
+            Debug.Log("BANNER SHOW");
             if (bannerView != null)
             {
                 bannerView.Show();
             }
-            yield return new WaitForSeconds(0.2f);
-            if (bannerView != null)
-            {
-                bannerView.Show();
-            }
-            yield return new WaitForSeconds(0.2f);
-            if (bannerView != null)
-            {
-                bannerView.Show();
-            }
+                    
         }
     }
 

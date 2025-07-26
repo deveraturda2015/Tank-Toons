@@ -214,6 +214,8 @@ public class GameplayUIController : MonoBehaviour
 
 	private void Start()
 	{
+		AdmobManager.instance.ShowBanner();
+
 		if (Screen.height >= 1080)
 		{
 			useMultipleBars = true;

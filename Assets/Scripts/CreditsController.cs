@@ -22,8 +22,8 @@ public class CreditsController : MonoBehaviour
 
 	private void Start()
 	{
-		GameObject.Find("VersionText").GetComponent<Text>().text = "PID: " + GlobalCommons.Instance.globalGameStats.PlayerID;
-		base.transform.Find("AppVerTxt").GetComponent<Text>().text = "v. " + Application.version;
+		//GameObject.Find("VersionText").GetComponent<Text>().text = "PID: " + GlobalCommons.Instance.globalGameStats.PlayerID;
+		//base.transform.Find("AppVerTxt").GetComponent<Text>().text = "v. " + Application.version;
 		OKButton = base.transform.Find("OKButton").GetComponent<Button>();
 		OKButton.onClick.AddListener(delegate
 		{
@@ -56,7 +56,7 @@ public class CreditsController : MonoBehaviour
 		SoundManager.instance.PlayButtonClickSound();
 		GlobalCommons.Instance.MessagesController.ShowConfirmationDialog(LocalizationManager.Instance.GetLocalizedText("FeedbackConfirmation"), delegate
 		{
-			string text = "emittercritter.dev@gmail.com";
+			string text = "info@nitrouppi.com";
 			string text2 = MyEscapeURL("Support id #" + GlobalCommons.Instance.globalGameStats.PlayerID);
 			string text3 = MyEscapeURL("Hello,\r\n");
 			Application.OpenURL("mailto:" + text + "?subject=" + text2 + "&body=" + text3);
@@ -87,39 +87,7 @@ public class CreditsController : MonoBehaviour
 			catch (Exception)
 			{
 			}
-			//switch (num)
-			//{
-			//case -1:
-			//	DebugHelper.Log("An error occured parsing compensation response");
-			//	break;
-			//case 1:
-			//	Purchaser.Instance.FinalizeItemPurchase(Purchaser.PRODUCT_DOUBLE_COINS);
-			//	GlobalCommons.Instance.MessagesController.ShowSimpleMessage(LocalizationManager.Instance.GetLocalizedText("MessageYouHaveReceivedAnItem") + "\n" + LocalizationManager.Instance.GetLocalizedText("TankBankNameText"));
-			//	break;
-			//case 2:
-			//	Purchaser.Instance.FinalizeItemPurchase(Purchaser.PRODUCT_COINPACK_1);
-			//	GlobalCommons.Instance.MessagesController.ShowSimpleMessage(LocalizationManager.Instance.GetLocalizedText("MessageYouHaveReceivedAnItem") + "\n" + Purchaser.GetCoinPackAmountForIndex(1).ToString() + " " + LocalizationManager.Instance.GetCoinsNumberEnding(Purchaser.GetCoinPackAmountForIndex(1)));
-			//	break;
-			//case 3:
-			//	Purchaser.Instance.FinalizeItemPurchase(Purchaser.PRODUCT_COINPACK_2);
-			//	GlobalCommons.Instance.MessagesController.ShowSimpleMessage(LocalizationManager.Instance.GetLocalizedText("MessageYouHaveReceivedAnItem") + "\n" + Purchaser.GetCoinPackAmountForIndex(2).ToString() + " " + LocalizationManager.Instance.GetCoinsNumberEnding(Purchaser.GetCoinPackAmountForIndex(2)));
-			//	break;
-			//case 4:
-			//	Purchaser.Instance.FinalizeItemPurchase(Purchaser.PRODUCT_COINPACK_3);
-			//	GlobalCommons.Instance.MessagesController.ShowSimpleMessage(LocalizationManager.Instance.GetLocalizedText("MessageYouHaveReceivedAnItem") + "\n" + Purchaser.GetCoinPackAmountForIndex(3).ToString() + " " + LocalizationManager.Instance.GetCoinsNumberEnding(Purchaser.GetCoinPackAmountForIndex(3)));
-			//	break;
-			//case 5:
-			//	Purchaser.Instance.FinalizeItemPurchase(Purchaser.PRODUCT_COINPACK_4);
-			//	GlobalCommons.Instance.MessagesController.ShowSimpleMessage(LocalizationManager.Instance.GetLocalizedText("MessageYouHaveReceivedAnItem") + "\n" + Purchaser.GetCoinPackAmountForIndex(4).ToString() + " " + LocalizationManager.Instance.GetCoinsNumberEnding(Purchaser.GetCoinPackAmountForIndex(4)));
-			//	break;
-			//case 6:
-			//	Purchaser.Instance.FinalizeItemPurchase(Purchaser.PRODUCT_COINPACK_5);
-			//	GlobalCommons.Instance.MessagesController.ShowSimpleMessage(LocalizationManager.Instance.GetLocalizedText("MessageYouHaveReceivedAnItem") + "\n" + Purchaser.GetCoinPackAmountForIndex(5).ToString() + " " + LocalizationManager.Instance.GetCoinsNumberEnding(Purchaser.GetCoinPackAmountForIndex(5)));
-			//	break;
-			//default:
-			//	DebugHelper.Log("Unrecognized compensation response id");
-			//	break;
-			//}
+			
 		}
 		compensationRequest = null;
 	}
@@ -191,6 +159,8 @@ public class CreditsController : MonoBehaviour
 
 	private void OKButtonClick()
 	{
+		AdmobManager.instance.ShowBanner();
+
 		LevelResultsController levelResultsController = UnityEngine.Object.FindObjectOfType<LevelResultsController>();
 		if ((bool)levelResultsController)
 		{

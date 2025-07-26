@@ -124,6 +124,7 @@ public class PauseMenuController : MonoBehaviour
 	public void SetState(bool pauseState)
 	{
 		SetPauseMenuEnabled(pauseState);
+		
 	}
 
 	private void SetPauseMenuEnabled(bool val)

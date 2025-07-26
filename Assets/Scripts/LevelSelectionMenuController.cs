@@ -59,6 +59,8 @@ public class LevelSelectionMenuController : MonoBehaviour
 
 	private void Start()
 	{
+		AdmobManager.instance.HideBanner();
+
 		newLevelItemShakeTimestamp = Time.fixedTime;
 		levelPagesCount = GlobalCommons.Instance.levelsContainer.LevelsCount / 15;
 		if (lastSelectedScreen == -1)

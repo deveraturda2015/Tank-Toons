@@ -40,6 +40,8 @@ public class ShopMenuController : MonoBehaviour
 
 	private void Start()
 	{
+		AdmobManager.instance.HideBanner();
+
 		if (GlobalCommons.Instance.PromotionController.PromoTimeLeft.HasValue)
 		{
 			PromoMode = true;

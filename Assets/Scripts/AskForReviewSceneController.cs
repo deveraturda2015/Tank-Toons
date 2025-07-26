@@ -101,8 +101,8 @@ public class AskForReviewSceneController : MonoBehaviour
 
 	private void TransferForRating()
 	{
-		Application.OpenURL("https://play.google.com/store/apps/details?id=com.dtanks.toonsd");
-	}
+        Application.OpenURL($"https://play.google.com/store/apps/details?id={Application.identifier}");
+    }
 
 	private void ConfirmRateButtonClick()
 	{

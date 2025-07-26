@@ -138,6 +138,8 @@ public class UpgradesMenuController : MonoBehaviour
 
 	private void Start()
 	{
+		AdmobManager.instance.HideBanner();
+
 		effectsSpawner = new EffectsSpawner(EffectsSpawner.EffectsSpawnerPreset.UpgradesShop);
 		maxWeaponUpgradeLevel = PlayerBalance.WeaponsUpgradesCost[0].Length;
 		maxSpeedUpgradeLevel = PlayerBalance.speedUpgradeCost.Length;
@@ -315,9 +317,12 @@ public class UpgradesMenuController : MonoBehaviour
 		ProcessArmorTutorial();
 		UpdateUpgradeButtons();
 		DebugHelper.Log("play time in minutes is: " + GlobalCommons.Instance.globalGameStats.GameStatistics.GetStat(GameStatistics.Stat.SecondsSpentPlaying) / 60);
-	}
 
-	private void LockedButtonClick()
+        AdmobManager.instance.HideBanner();
+
+    }
+
+    private void LockedButtonClick()
 	{
 		SoundManager.instance.PlayNotAvailableSound();
 	}
@@ -330,13 +335,15 @@ public class UpgradesMenuController : MonoBehaviour
 			GlobalCommons.Instance.SaveGame();
 		});
 
-		//bool isReady = AdManager.IsRewardedAdReady();
-		//// Show it if it's ready
-		//if (isReady)
-		//{
-		//    AdManager.ShowRewardedAd();
-		//}
-		SoundManager.instance.PlayButtonClickSound();
+        //bool isReady = AdManager.IsRewardedAdReady();
+        //// Show it if it's ready
+        //if (isReady)
+        //{
+        //    AdManager.ShowRewardedAd();
+        //}
+        AdmobManager.instance.HideBanner();
+
+        SoundManager.instance.PlayButtonClickSound();
 
 		CloseRewardUI();
 		//int num = PlayRewardedAdSceneController.SetNextRewardValue(PlayRewardedAdSceneController.RewadResetLocation.Upgrades);
